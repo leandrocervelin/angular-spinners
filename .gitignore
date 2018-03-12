@@ -1,7 +1,7 @@
-node_modules
-.vscode
-.idea
-.DS_Store
-npm-debug.log
-*.ngsummary.json
-*.ngfactory.ts
+#node_modules
+#.vscode
+#.idea
+#.DS_Store
+#npm-debug.log
+#*.ngsummary.json
+#*.ngfactory.ts
