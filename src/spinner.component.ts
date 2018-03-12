@@ -8,7 +8,8 @@ import { SpinnerService } from './spinner.service';
       <img *ngIf="loadingImage" [src]="loadingImage" />
       <ng-content></ng-content>
     </div>
-  `
+  `,
+  providers: [SpinnerService]
 })
 export class SpinnerComponent implements OnInit, OnDestroy {
   constructor(private spinnerService: SpinnerService) {}

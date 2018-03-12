@@ -109,7 +109,8 @@ var SpinnerComponent = /** @class */ (function () {
     SpinnerComponent.decorators = [
         { type: core.Component, args: [{
                     selector: 'spinner',
-                    template: "\n    <div *ngIf=\"show\">\n      <img *ngIf=\"loadingImage\" [src]=\"loadingImage\" />\n      <ng-content></ng-content>\n    </div>\n  "
+                    template: "\n    <div *ngIf=\"show\">\n      <img *ngIf=\"loadingImage\" [src]=\"loadingImage\" />\n      <ng-content></ng-content>\n    </div>\n  ",
+                    providers: [SpinnerService]
                 },] },
     ];
     /** @nocollapse */
