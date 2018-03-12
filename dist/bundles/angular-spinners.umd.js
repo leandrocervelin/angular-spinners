@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng.spinners = {}),global.ng.core,global.ng.common));
-}(this, (function (exports,core,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/http')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common', '@angular/http'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng.spinners = {}),global.ng.core,global.ng.common,global.ng.http));
+}(this, (function (exports,core,common,http) { 'use strict';
 
 var SpinnerService = /** @class */ (function () {
     function SpinnerService() {
@@ -132,7 +132,7 @@ var SpinnerModule = /** @class */ (function () {
     SpinnerModule.decorators = [
         { type: core.NgModule, args: [{
                     declarations: [SpinnerComponent],
-                    imports: [common.CommonModule],
+                    imports: [common.CommonModule, http.HttpModule],
                     exports: [SpinnerComponent],
                     providers: [SpinnerService]
                 },] },

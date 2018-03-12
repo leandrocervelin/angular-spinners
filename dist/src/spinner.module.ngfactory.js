@@ -7,7 +7,8 @@
 import * as i0 from "@angular/core";
 import * as i1 from "./spinner.module";
 import * as i2 from "@angular/common";
-import * as i3 from "./spinner.service";
-var SpinnerModuleNgFactory = i0.ɵcmf(i1.SpinnerModule, [], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, []], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(4608, i2.NgLocalization, i2.NgLocaleLocalization, [i0.LOCALE_ID, [2, i2.ɵa]]), i0.ɵmpd(4608, i3.SpinnerService, i3.SpinnerService, []), i0.ɵmpd(512, i2.CommonModule, i2.CommonModule, []), i0.ɵmpd(512, i1.SpinnerModule, i1.SpinnerModule, [])]); });
+import * as i3 from "@angular/http";
+import * as i4 from "./spinner.service";
+var SpinnerModuleNgFactory = i0.ɵcmf(i1.SpinnerModule, [], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, []], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(4608, i2.NgLocalization, i2.NgLocaleLocalization, [i0.LOCALE_ID, [2, i2.ɵa]]), i0.ɵmpd(4608, i3.BrowserXhr, i3.BrowserXhr, []), i0.ɵmpd(4608, i3.ResponseOptions, i3.BaseResponseOptions, []), i0.ɵmpd(5120, i3.XSRFStrategy, i3.ɵa, []), i0.ɵmpd(4608, i3.XHRBackend, i3.XHRBackend, [i3.BrowserXhr, i3.ResponseOptions, i3.XSRFStrategy]), i0.ɵmpd(4608, i3.RequestOptions, i3.BaseRequestOptions, []), i0.ɵmpd(5120, i3.Http, i3.ɵb, [i3.XHRBackend, i3.RequestOptions]), i0.ɵmpd(4608, i4.SpinnerService, i4.SpinnerService, []), i0.ɵmpd(512, i2.CommonModule, i2.CommonModule, []), i0.ɵmpd(512, i3.HttpModule, i3.HttpModule, []), i0.ɵmpd(512, i1.SpinnerModule, i1.SpinnerModule, [])]); });
 export { SpinnerModuleNgFactory as SpinnerModuleNgFactory };
 //# sourceMappingURL=spinner.module.ngfactory.js.map

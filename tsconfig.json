@@ -11,6 +11,7 @@
     "paths": {
       "@angular/core": ["node_modules/@angular/core"],
       "@angular/common": ["node_modules/@angular/common"],
+      "@angular/http": ["node_modules/@angular/http"],
       "rxjs/*": ["node_modules/rxjs/*"]
     },
     "rootDir": ".",

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 import { SpinnerComponent } from './spinner.component';
 import { SpinnerService } from './spinner.service';
 var SpinnerModule = /** @class */ (function () {
@@ -8,7 +9,7 @@ var SpinnerModule = /** @class */ (function () {
     SpinnerModule.decorators = [
         { type: NgModule, args: [{
                     declarations: [SpinnerComponent],
-                    imports: [CommonModule],
+                    imports: [CommonModule, HttpModule],
                     exports: [SpinnerComponent],
                     providers: [SpinnerService]
                 },] },
