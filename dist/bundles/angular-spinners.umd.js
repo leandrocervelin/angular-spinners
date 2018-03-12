@@ -1,10 +1,10 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng.spinners = global.ng.spinners || {}),global.ng.core,global.ng.common));
-}(this, (function (exports,_angular_core,_angular_common) { 'use strict';
+	(factory((global.ng = global.ng || {}, global.ng.spinners = {}),global.ng.core,global.ng.common));
+}(this, (function (exports,core,common) { 'use strict';
 
-var SpinnerService = (function () {
+var SpinnerService = /** @class */ (function () {
     function SpinnerService() {
         this.spinnerCache = new Set();
     }
@@ -73,19 +73,19 @@ var SpinnerService = (function () {
         });
         return showing;
     };
+    SpinnerService.decorators = [
+        { type: core.Injectable },
+    ];
+    /** @nocollapse */
+    SpinnerService.ctorParameters = function () { return []; };
     return SpinnerService;
 }());
-SpinnerService.decorators = [
-    { type: _angular_core.Injectable },
-];
-/** @nocollapse */
-SpinnerService.ctorParameters = function () { return []; };
 
-var SpinnerComponent = (function () {
+var SpinnerComponent = /** @class */ (function () {
     function SpinnerComponent(spinnerService) {
         this.spinnerService = spinnerService;
         this.isShowing = false;
-        this.showChange = new _angular_core.EventEmitter();
+        this.showChange = new core.EventEmitter();
     }
     Object.defineProperty(SpinnerComponent.prototype, "show", {
         get: function () {
@@ -106,47 +106,41 @@ var SpinnerComponent = (function () {
     SpinnerComponent.prototype.ngOnDestroy = function () {
         this.spinnerService._unregister(this);
     };
+    SpinnerComponent.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'spinner',
+                    template: "\n    <div *ngIf=\"show\">\n      <img *ngIf=\"loadingImage\" [src]=\"loadingImage\" />\n      <ng-content></ng-content>\n    </div>\n  "
+                },] },
+    ];
+    /** @nocollapse */
+    SpinnerComponent.ctorParameters = function () { return [
+        { type: SpinnerService, },
+    ]; };
+    SpinnerComponent.propDecorators = {
+        "name": [{ type: core.Input },],
+        "group": [{ type: core.Input },],
+        "loadingImage": [{ type: core.Input },],
+        "show": [{ type: core.Input },],
+        "showChange": [{ type: core.Output },],
+    };
     return SpinnerComponent;
 }());
-SpinnerComponent.decorators = [
-    { type: _angular_core.Component, args: [{
-                selector: 'spinner',
-                template: "\n    <div *ngIf=\"show\">\n      <img *ngIf=\"loadingImage\" [src]=\"loadingImage\" />\n      <ng-content></ng-content>\n    </div>\n  "
-            },] },
-];
-/** @nocollapse */
-SpinnerComponent.ctorParameters = function () { return [
-    { type: SpinnerService, },
-]; };
-SpinnerComponent.propDecorators = {
-    'name': [{ type: _angular_core.Input },],
-    'group': [{ type: _angular_core.Input },],
-    'loadingImage': [{ type: _angular_core.Input },],
-    'show': [{ type: _angular_core.Input },],
-    'showChange': [{ type: _angular_core.Output },],
-};
 
-var SpinnerModule = (function () {
+var SpinnerModule = /** @class */ (function () {
     function SpinnerModule() {
     }
+    SpinnerModule.decorators = [
+        { type: core.NgModule, args: [{
+                    declarations: [SpinnerComponent],
+                    imports: [common.CommonModule],
+                    exports: [SpinnerComponent],
+                    providers: [SpinnerService]
+                },] },
+    ];
+    /** @nocollapse */
+    SpinnerModule.ctorParameters = function () { return []; };
     return SpinnerModule;
 }());
-SpinnerModule.decorators = [
-    { type: _angular_core.NgModule, args: [{
-                declarations: [SpinnerComponent],
-                imports: [_angular_common.CommonModule],
-                exports: [SpinnerComponent],
-                providers: [SpinnerService]
-            },] },
-];
-/** @nocollapse */
-SpinnerModule.ctorParameters = function () { return []; };
-
-/**
- * @module
- * @description
- * Entry point for all public APIs of the angular-spinners package.
- */
 
 exports.SpinnerComponent = SpinnerComponent;
 exports.SpinnerService = SpinnerService;

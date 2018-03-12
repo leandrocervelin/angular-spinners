@@ -1,8 +1,10 @@
 export default {
   entry: 'dist/index.js',
-  dest: 'dist/bundles/angular-spinners.umd.js',
   sourceMap: false,
-  format: 'umd',
+  output: {
+    file: 'dist/bundles/angular-spinners.umd.js',
+    format: 'umd'
+  },
   moduleName: 'ng.spinners',
   globals: {
     '@angular/core': 'ng.core',
